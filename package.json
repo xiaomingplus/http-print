@@ -1,0 +1,47 @@
+{
+  "name": "httpconsole",
+  "description": "Command line HTTP server tool for console http request",
+  "version": "0.0.0",
+  "author": "xiaomingplus",
+  "bin": {
+    "httpconsole": "./bin/run",
+    "hc": "./bin/run"
+  },
+  "bugs": "https://github.com/xiaomingplus/httpconsole/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.5",
+    "eslint-config-oclif": "^3.1",
+    "mocha": "^5",
+    "nyc": "^13"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/xiaomingplus/httpconsole",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "httpconsole"
+  },
+  "repository": "xiaomingplus/httpconsole",
+  "scripts": {
+    "posttest": "eslint .",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
+  }
+}
