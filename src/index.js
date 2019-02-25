@@ -1,8 +1,8 @@
 const {Command, flags} = require('@oclif/command')
 const server = require('./server')
-class HttpconsoleCommand extends Command {
+class HttpPrintCommand extends Command {
   async run() {
-    const {flags} = this.parse(HttpconsoleCommand)
+    const {flags} = this.parse(HttpPrintCommand)
     const options = {}
     if (flags.port) {
       options.port = flags.port
@@ -11,9 +11,9 @@ class HttpconsoleCommand extends Command {
   }
 }
 
-HttpconsoleCommand.description = 'Create a http server and console all request info'
+HttpPrintCommand.description = 'Create a http server and console all request info'
 
-HttpconsoleCommand.flags = {
+HttpPrintCommand.flags = {
   // add --version flag to show CLI version
   version: flags.version({char: 'v'}),
   // add --help flag to show CLI version
@@ -21,4 +21,4 @@ HttpconsoleCommand.flags = {
   port: flags.string({char: 'p', description: 'http port,default is 3001'}),
 }
 
-module.exports = HttpconsoleCommand
+module.exports = HttpPrintCommand

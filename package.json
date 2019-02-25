@@ -1,13 +1,13 @@
 {
-  "name": "httpconsole",
+  "name": "http-print",
   "description": "Command line HTTP server tool for console http request",
   "version": "0.0.1",
   "author": "xiaomingplus",
   "bin": {
-    "httpconsole": "./bin/run",
-    "hc": "./bin/run"
+    "http-print": "./bin/run",
+    "hp": "./bin/run"
   },
-  "bugs": "https://github.com/xiaomingplus/httpconsole/issues",
+  "bugs": "https://github.com/xiaomingplus/http-print/issues",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -31,19 +31,19 @@
     "/bin",
     "/src"
   ],
-  "homepage": "https://github.com/xiaomingplus/httpconsole",
+  "homepage": "https://github.com/xiaomingplus/http-print",
   "keywords": [
     "oclif"
   ],
   "license": "MIT",
   "main": "src/index.js",
   "oclif": {
-    "bin": "httpconsole"
+    "bin": "http-print"
   },
-  "repository": "xiaomingplus/httpconsole",
+  "repository": "xiaomingplus/http-print",
   "scripts": {
     "posttest": "eslint .",
     "readme": "oclif-dev readme",
-    "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
+    "test": "nyc mocha --forbid-only --exit \"test/**/*.test.js\""
   }
 }

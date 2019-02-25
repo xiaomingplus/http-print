@@ -1,5 +1,5 @@
 const http = require('http')
-const debug = require('debug')('httpconsole')
+const debug = require('debug')('http-print')
 const chalk = require('chalk')
 const createHttpServer = function (options) {
   options = Object.assign({
@@ -13,6 +13,8 @@ const createHttpServer = function (options) {
       method,
       url,
     } = request
+    // eslint-disable-next-line no-console
+    console.log('\n--- ' + chalk.blue(method) + ' request ' + chalk.green(url), new Date(), '---')
     let body = []
     request.on('error', err => {
       // eslint-disable-next-line no-console
@@ -40,11 +42,13 @@ const createHttpServer = function (options) {
         url,
         body,
       }
-      // eslint-disable-next-line no-console
-      console.log(chalk.green(method), url)
       if (method === 'POST' || method === 'PUT' || method === 'PATCH' || method === 'DELETE') {
       // eslint-disable-next-line no-console
-        console.log(chalk.blue('body:'), body)
+        console.log(chalk.blue('body start'))
+        // eslint-disable-next-line no-console
+        console.log(body)
+        // eslint-disable-next-line no-console
+        console.log(chalk.blue('body end'))
       }
       response.write(JSON.stringify(responseBody))
       response.end()
