@@ -16,6 +16,7 @@
     "debug": "^4.1.1"
   },
   "devDependencies": {
+    "@oclif/dev-cli": "^1.21.2",
     "@oclif/test": "^1",
     "chai": "^4",
     "eslint": "^5.5",
@@ -42,6 +43,7 @@
   "repository": "xiaomingplus/httpconsole",
   "scripts": {
     "posttest": "eslint .",
+    "readme": "oclif-dev readme",
     "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
   }
 }

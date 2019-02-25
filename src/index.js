@@ -11,17 +11,14 @@ class HttpconsoleCommand extends Command {
   }
 }
 
-HttpconsoleCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+HttpconsoleCommand.description = 'Create a http server and console all request info'
 
 HttpconsoleCommand.flags = {
   // add --version flag to show CLI version
   version: flags.version({char: 'v'}),
   // add --help flag to show CLI version
   help: flags.help({char: 'h'}),
-  port: flags.string({char: 'p', description: 'http port'}),
+  port: flags.string({char: 'p', description: 'http port,default is 3001'}),
 }
 
 module.exports = HttpconsoleCommand

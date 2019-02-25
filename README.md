@@ -9,7 +9,23 @@ Command line HTTP server tool for console http request
 [![License](https://img.shields.io/npm/l/httpconsole.svg)](https://github.com/xiaomingplus/httpconsole/blob/master/package.json)
 
 <!-- toc -->
-# Usage
+* [Usage](#usage)
+
+<!-- tocstop -->
+## Usage
+
 <!-- usage -->
-# Commands
-<!-- commands -->
+
+```sh
+npm install -g httpconsole
+#The bin command you can use `httpconsole` or `hc`.
+hc
+# It will listen at the default port 3001
+hc -p 3002
+# You can customize the port
+hc -v
+hc --help
+```
+
+<!-- usagestop -->
+<!-- commandsstop -->
