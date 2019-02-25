@@ -1,7 +1,7 @@
 {
   "name": "http-print",
   "description": "Command line HTTP server tool for console http request",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "xiaomingplus",
   "bin": {
     "http-print": "./bin/run",
